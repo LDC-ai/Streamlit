@@ -48,7 +48,7 @@ page_bg = """
 st.markdown(page_bg, unsafe_allow_html=True)
 
 # 웹 페이지 제목
-st.title("Pet Emotion Classifier")
+st.title("🐾 Pet Emotion Classifier 🐾")
 
 # 파일 업로드 인터페이스
 uploaded_file = st.file_uploader("애완동물 사진을 업로드하세요", type=["jpg", "jpeg", "png"])
