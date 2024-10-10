@@ -6,7 +6,7 @@ import os
 import matplotlib.pyplot as plt
 
 # 딥러닝 모델 불러오기
-model = tf.keras.models.load_model("best_model.keras")
+model = tf.keras.models.load_model("best_model3.keras")
 
 # 사진을 저장할 폴더 생성
 if not os.path.exists("uploads"):
@@ -24,7 +24,7 @@ if 'user_selections' not in st.session_state:
 def preprocess_image(image):
     if image.mode != 'RGB':
         image = image.convert('RGB')
-    image = image.resize((256, 256))
+    image = image.resize((224, 224))
     image = np.array(image) / 255.0
     image = np.expand_dims(image, axis=0)
     return image
